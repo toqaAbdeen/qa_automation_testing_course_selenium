@@ -1,0 +1,10 @@
+// by className
+// driver.findElement(By.className("className"));
+// if i want 2 or more classes use cssSelector and use dot (.) or (#) for
+// driver.findElement(By.id("search"));
+// driver.findElement(By.linkText("New User Signup!"));
+// driver.findElement(By.partialLinkText("New User"));
+// driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div[3]/div/form/
+// /html/body/section/div/div/div[3]/div/form/button
+
+I

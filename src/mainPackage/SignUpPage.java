@@ -1,84 +1,77 @@
 package mainPackage;
 
-import java.util.Random;
+import java.time.Duration;
+
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class SignUpPage {
-	WebDriver driver;
+import pageObjects.Actions;
+import pageObjects.Assertions;
+
+public class SignUpPage extends Actions {
+
+	Assertions assertions = new Assertions();
+
+	String username = "ToqaTest";
+
 	@BeforeTest
-	public void Setup() {
-		driver = new ChromeDriver(); // == cy.
-		driver.manage().window().maximize();
+	public void setup() {
+		maximizeBrowser();
 	}
+
 	@Test(description = "Validate that the user can sign up successfully")
 	public void signUpFunctionalty() {
 
-	    driver.get("https://automationexercise.com/login");
+		// Navigate to website
+		visitAutomationexerciseWebsite();
 
-	    // Enter Name
-	    driver.findElement(By.name("name")).sendKeys("ToqaTest");
+		// Wait setup
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-	    // Generate Random Email
-	    Random randomNumber = new Random();
-	    int index = randomNumber.nextInt(10000);
-	    String email = "toqatest" + index + "@gmail.com";
+		WebDriverWait driverWait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
-	    // Enter Email
-	    driver.findElement(By.cssSelector("[data-qa='signup-email']")).sendKeys(email);
+		// Signup information
+		typeUserName(username);
+		typeEmailInputField();
+		clickOnSignUpButton();
 
-	    // Click Signup
-	    driver.findElement(By.cssSelector("[data-qa='signup-button']")).click();
+		// Account Information
+		selectGender();
 
-	    // Fill Account Information
-	    driver.findElement(By.id("id_gender2")).click();
-	    driver.findElement(By.id("password")).sendKeys("test@123");
+		typeInMandatoryField("password", "test@123");
+		typeInMandatoryField("first_name", "Toqa");
+		typeInMandatoryField("last_name", "Abdeen");
+		typeInMandatoryField("address1", "Nablus");
 
-	    // First Name
-	    driver.findElement(By.id("first_name")).sendKeys("Toqa");
+		selectCountry("Israel");
 
-	    // Last Name
-	    driver.findElement(By.id("last_name")).sendKeys("Abdeen");
+		typeInMandatoryField("state", "state");
+		typeInMandatoryField("city", "Nablus");
+		typeInMandatoryField("zipcode", "123455");
+		typeInMandatoryField("mobile_number", "0597000000");
 
-	    // Address
-	    driver.findElement(By.id("address1")).sendKeys("Nablus");
+		// Create Account
+		clickOnCreateAccountButton();
 
-	    // Country
-	    WebElement menu = driver.findElement(By.name("country"));
-	    Select dropdown = new Select(menu);
-	    dropdown.selectByVisibleText("Israel");
+		/// static wait
+		// Thread.sleep(1000);
+		// Implicit wait
+		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30)); 
+		// Explicit wait 
+		//WebDriverWait driverWait = new WebDriverWait(driver, Duration.ofSeconds(3)); 
+		//driverWait.until(ExpectedConditions.presenceOfElementLocated(By.className("title"))); 
+		//driverWait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("username"))));
 
-	    // State
-	    driver.findElement(By.id("state")).sendKeys("Test");
-
-	    // City
-	    driver.findElement(By.id("city")).sendKeys("Nablus");
-
-	    // Zipcode
-	    driver.findElement(By.id("zipcode")).sendKeys("123455");
-
-	    // Mobile Number
-	    driver.findElement(By.id("mobile_number")).sendKeys("0597000000");
-
-	    // Create Account
-	    driver.findElement(By.cssSelector("[data-qa='create-account']")).click();
-
-	    // Verify Account Created
-	    String actualResult = driver.findElement(By.cssSelector("[data-qa='account-created']")).getText();
-
-	    Assert.assertEquals(actualResult, "ACCOUNT CREATED!", "Text is not matching");
+		assertions.checkAccountIsCreated();
 	}
-	
+
+
 	@AfterTest
-	public void afterTeest() {
+	public void afterTest() {
 		driver.close();
 	}
-
 }
