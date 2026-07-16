@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-07-16T22:22:36 IDT" name="Default suite" finished-at="2026-07-16T22:22:52 IDT" duration-ms="15401">
+    <groups>
+    </groups>
+    <test started-at="2026-07-16T22:22:36 IDT" name="Default test" finished-at="2026-07-16T22:22:52 IDT" duration-ms="15401">
+      <class name="mainPackage.SignUpPage">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:mainPackage.SignUpPage@4c163e3]" started-at="2026-07-16T22:22:36 IDT" name="Setup" finished-at="2026-07-16T22:22:41 IDT" duration-ms="4593" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method signature="signUpFunctionalty()[pri:0, instance:mainPackage.SignUpPage@4c163e3]" started-at="2026-07-16T22:22:41 IDT" name="signUpFunctionalty" description="Validate that the user can sign up successfully" finished-at="2026-07-16T22:22:51 IDT" duration-ms="10339" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signUpFunctionalty -->
+        <test-method is-config="true" signature="afterTeest()[pri:0, instance:mainPackage.SignUpPage@4c163e3]" started-at="2026-07-16T22:22:51 IDT" name="afterTeest" finished-at="2026-07-16T22:22:52 IDT" duration-ms="347" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTeest -->
+      </class> <!-- mainPackage.SignUpPage -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
