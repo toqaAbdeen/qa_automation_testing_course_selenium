@@ -6,13 +6,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="mainPackage.SignUpPage">
+      <class name="pages.OrderTest">
         <methods>
           <include name="setup"/>
           <include name="afterTest"/>
-          <include name="signUpFunctionalty"/>
+          <include name="productsFunctionality"/>
         </methods>
-      </class> <!-- mainPackage.SignUpPage -->
+      </class> <!-- pages.OrderTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

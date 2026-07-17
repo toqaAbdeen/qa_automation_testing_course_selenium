@@ -1,14 +1,21 @@
 package pageObjects;
 
+import java.time.Duration;
+import java.util.List;
 import java.util.Random;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import support.Constant;
 
 public class Actions implements Constant {
+
+	WebDriverWait wait = new WebDriverWait(driver, java.time.Duration.ofSeconds(10));
+
 	public void visitAutomationexerciseWebsite() {
 		driver.get("https://automationexercise.com/login");
 	}
@@ -68,6 +75,120 @@ public class Actions implements Constant {
 	public void clickOnSubmitButtonInContactUsForm() {
 		driver.findElement(By.cssSelector("[data-qa=submit-button]")).click();
 		driver.switchTo().alert().accept();
+	}
+
+	// PROJECT
+
+	public void visitAutomationexerciseProductPage() {
+		driver.get("https://automationexercise.com/products");
+	}
+
+	public void selectRandomProduct() {
+
+		// Go to Products page
+		driver.findElement(By.cssSelector("a[href='/products']")).click();
+
+		// Get all View Product buttons
+		List<WebElement> viewProducts = driver.findElements(By.cssSelector("a[href^='/product_details/']"));
+
+		Random random = new Random();
+
+		int index = random.nextInt(viewProducts.size());
+
+		// Click random View Product
+		viewProducts.get(index).click();
+	}
+
+	public void changeProductQuantity(int quantity) {
+
+		WebElement quantityField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("quantity")));
+
+		quantityField.clear();
+		quantityField.sendKeys(String.valueOf(quantity));
+	}
+
+	public void clickAddToCart() {
+
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+		WebElement addButton = wait
+				.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button.btn.btn-default.cart")));
+
+		addButton.click();
+	}
+
+	public void clickViewCart() {
+
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//u[text()='View Cart']"))).click();
+
+	}
+
+	public void clickProceedToCheckout() {
+
+		wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".check_out"))).click();
+
+	}
+
+	public void clickPlaceOrder() {
+
+		wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[href='/payment']"))).click();
+
+	}
+
+	public void fillPaymentData() {
+
+		driver.findElement(By.name("name_on_card")).sendKeys("Toqa");
+
+		driver.findElement(By.name("card_number2")).sendKeys("123456789");
+
+		driver.findElement(By.name("cvc")).sendKeys("100");
+
+		driver.findElement(By.name("expiry_month")).sendKeys("12");
+
+		driver.findElement(By.name("expiry_year")).sendKeys("2030");
+
+	}
+
+	public void clickPayButton() {
+
+		driver.findElement(By.id("submit")).click();
+
+	}
+
+	public void clickPayAndConfirm() {
+
+		driver.findElement(By.id("submit")).click();
+
+	}
+
+	public String getOrderConfirmationMessage() {
+
+		return driver.findElement(By.xpath("//p[contains(text(),'Congratulations')]")).getText();
+
+	}
+
+	public void clickLogin() {
+
+		driver.findElement(By.cssSelector("a[href='/login']")).click();
+
+	}
+
+	public void typeLoginEmail(String email) {
+
+		driver.findElement(By.cssSelector("[data-qa='login-email']")).sendKeys(email);
+
+	}
+
+	public void typeLoginPassword(String password) {
+
+		driver.findElement(By.cssSelector("[data-qa='login-password']")).sendKeys(password);
+
+	}
+
+	public void clickLoginButton() {
+
+		driver.findElement(By.cssSelector("[data-qa='login-button']")).click();
+
 	}
 
 }

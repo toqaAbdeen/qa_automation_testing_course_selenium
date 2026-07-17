@@ -4,8 +4,8 @@
 <listeners><listener class-name="support.ExtentReportClass"></listener></listeners>
   <test thread-count="5" name="Test">
     <classes>
-      <class name="mainPackage.SignUpPage"/>
-      <class name="mainPackage.ContactUs"/>
+    
+      <class name="pages.OrderTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
