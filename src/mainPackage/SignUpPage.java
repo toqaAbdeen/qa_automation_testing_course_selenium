@@ -30,9 +30,8 @@ public class SignUpPage extends Actions {
 		visitAutomationexerciseWebsite();
 
 		// Wait setup
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
-		WebDriverWait driverWait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+//		WebDriverWait driverWait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
 		// Signup information
 		typeUserName(username);
@@ -45,7 +44,7 @@ public class SignUpPage extends Actions {
 		typeInMandatoryField("password", "test@123");
 		typeInMandatoryField("first_name", "Toqa");
 		typeInMandatoryField("last_name", "Abdeen");
-		typeInMandatoryField("address1", "Nablus");
+		typeInMandatoryField("address", "Nablus");
 
 		selectCountry("Israel");
 
@@ -60,18 +59,17 @@ public class SignUpPage extends Actions {
 		/// static wait
 		// Thread.sleep(1000);
 		// Implicit wait
-		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30)); 
-		// Explicit wait 
-		//WebDriverWait driverWait = new WebDriverWait(driver, Duration.ofSeconds(3)); 
-		//driverWait.until(ExpectedConditions.presenceOfElementLocated(By.className("title"))); 
-		//driverWait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("username"))));
+		// driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		// Explicit wait
+		// WebDriverWait driverWait = new WebDriverWait(driver, Duration.ofSeconds(3));
+		// driverWait.until(ExpectedConditions.presenceOfElementLocated(By.className("title")));
+		// driverWait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("username"))));
 
 		assertions.checkAccountIsCreated();
 	}
 
-
 	@AfterTest
 	public void afterTest() {
-		driver.close();
+		closeBrowser();
 	}
 }
