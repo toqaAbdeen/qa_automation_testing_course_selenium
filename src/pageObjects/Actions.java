@@ -83,19 +83,25 @@ public class Actions implements Constant {
 		driver.get("https://automationexercise.com/products");
 	}
 
-	public void selectRandomProduct() {
+	public void selectRandomProduct() throws InterruptedException {
 
 		// Go to Products page
 		driver.findElement(By.cssSelector("a[href='/products']")).click();
 
-		// Get all View Product buttons
+		Thread.sleep(3000);
+
+		// Get number of products
 		List<WebElement> viewProducts = driver.findElements(By.cssSelector("a[href^='/product_details/']"));
 
 		Random random = new Random();
 
 		int index = random.nextInt(viewProducts.size());
 
-		// Click random View Product
+		Thread.sleep(2000);
+
+		// Get element again to avoid stale element
+		viewProducts = driver.findElements(By.cssSelector("a[href^='/product_details/']"));
+
 		viewProducts.get(index).click();
 	}
 
@@ -158,12 +164,6 @@ public class Actions implements Constant {
 	public void clickPayAndConfirm() {
 
 		driver.findElement(By.id("submit")).click();
-
-	}
-
-	public String getOrderConfirmationMessage() {
-
-		return driver.findElement(By.xpath("//p[contains(text(),'Congratulations')]")).getText();
 
 	}
 

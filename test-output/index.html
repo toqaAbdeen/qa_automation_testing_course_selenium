@@ -129,15 +129,15 @@
                   <a name="productsFunctionality">
                   </a> <!-- productsFunctionality -->
                   <span class="method-name">productsFunctionality</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;*[name=&apos;name_on_card2&apos;]&quot;}
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;*[name=&apos;card_number2&apos;]&quot;}
   (Session info: chrome=150.0.7871.128)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
 Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b20fdd7d49651c6c09c4ad40c45e1626, findElement {using=name, value=name_on_card2}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.128, chrome: {chromedriverVersion: 150.0.7871.124 (9261fd0a595..., userDataDir: C:\Users\abdee\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56269}, goog:processID: 4540, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56269/devtoo..., se:cdpVersion: 150.0.7871.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b20fdd7d49651c6c09c4ad40c45e1626
+Command: [8ab6986e72f3278932f25694aa247bd1, findElement {using=name, value=card_number2}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.128, chrome: {chromedriverVersion: 150.0.7871.124 (9261fd0a595..., userDataDir: C:\Users\abdee\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57742}, goog:processID: 20692, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57742/devtoo..., se:cdpVersion: 150.0.7871.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8ab6986e72f3278932f25694aa247bd1
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -146,10 +146,10 @@ Session ID: b20fdd7d49651c6c09c4ad40c45e1626
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
 	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:67)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:384)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:378)
-	at pageObjects.Actions.fillPaymentData(Actions.java:140)
+	at pageObjects.Actions.fillPaymentData(Actions.java:148)
 	at pages.OrderTest.productsFunctionality(OrderTest.java:52)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
 ... Removed 28 stack frames
@@ -219,12 +219,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'productsFunctionality')
 data.setCell(0, 2, 'pages.OrderTest')
-data.setCell(0, 3, 15219);
+data.setCell(0, 3, 24927);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 15 seconds</span>
+              <span class="suite-total-time">Total running time: 24 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -259,11 +259,11 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">productsFunctionality</span>
-                <span class="method-start">79 ms</span>
+                <span class="method-start">100 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-suite after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">16148 ms</span>
+                <span class="method-start">26046 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

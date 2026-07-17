@@ -2,38 +2,38 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-07-17T11:53:42 IDT" name="Suite" finished-at="2026-07-17T11:53:57 IDT" duration-ms="15456">
+  <suite started-at="2026-07-17T12:55:07 IDT" name="Suite" finished-at="2026-07-17T12:55:33 IDT" duration-ms="25215">
     <groups>
     </groups>
-    <test started-at="2026-07-17T11:53:42 IDT" name="Test" finished-at="2026-07-17T11:53:57 IDT" duration-ms="15456">
+    <test started-at="2026-07-17T12:55:07 IDT" name="Test" finished-at="2026-07-17T12:55:33 IDT" duration-ms="25215">
       <class name="pages.OrderTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:pages.OrderTest@1e11bc55]" started-at="2026-07-17T11:53:42 IDT" name="setup" finished-at="2026-07-17T11:53:42 IDT" duration-ms="46" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:pages.OrderTest@1e11bc55]" started-at="2026-07-17T12:55:07 IDT" name="setup" finished-at="2026-07-17T12:55:07 IDT" duration-ms="62" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="productsFunctionality()[pri:0, instance:pages.OrderTest@1e11bc55]" started-at="2026-07-17T11:53:42 IDT" name="productsFunctionality" description="Validate user can add product with quantity 2" finished-at="2026-07-17T11:53:57 IDT" duration-ms="15219" status="FAIL">
+        <test-method signature="productsFunctionality()[pri:0, instance:pages.OrderTest@1e11bc55]" started-at="2026-07-17T12:55:07 IDT" name="productsFunctionality" description="Validate user can add product with quantity 2" finished-at="2026-07-17T12:55:32 IDT" duration-ms="24927" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"*[name='name_on_card2']"}
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"*[name='card_number2']"}
   (Session info: chrome=150.0.7871.128)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
 Build info: version: '4.39.0', revision: '126f156aee'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b20fdd7d49651c6c09c4ad40c45e1626, findElement {using=name, value=name_on_card2}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.128, chrome: {chromedriverVersion: 150.0.7871.124 (9261fd0a595..., userDataDir: C:\Users\abdee\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56269}, goog:processID: 4540, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56269/devtoo..., se:cdpVersion: 150.0.7871.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b20fdd7d49651c6c09c4ad40c45e1626]]>
+Command: [8ab6986e72f3278932f25694aa247bd1, findElement {using=name, value=card_number2}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.128, chrome: {chromedriverVersion: 150.0.7871.124 (9261fd0a595..., userDataDir: C:\Users\abdee\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57742}, goog:processID: 20692, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57742/devtoo..., se:cdpVersion: 150.0.7871.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8ab6986e72f3278932f25694aa247bd1]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='name_on_card2']"}
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='card_number2']"}
   (Session info: chrome=150.0.7871.128)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
 Build info: version: '4.39.0', revision: '126f156aee'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b20fdd7d49651c6c09c4ad40c45e1626, findElement {using=name, value=name_on_card2}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.128, chrome: {chromedriverVersion: 150.0.7871.124 (9261fd0a595..., userDataDir: C:\Users\abdee\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56269}, goog:processID: 4540, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56269/devtoo..., se:cdpVersion: 150.0.7871.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b20fdd7d49651c6c09c4ad40c45e1626
+Command: [8ab6986e72f3278932f25694aa247bd1, findElement {using=name, value=card_number2}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.128, chrome: {chromedriverVersion: 150.0.7871.124 (9261fd0a595..., userDataDir: C:\Users\abdee\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57742}, goog:processID: 20692, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57742/devtoo..., se:cdpVersion: 150.0.7871.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8ab6986e72f3278932f25694aa247bd1
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -45,10 +45,10 @@ at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(Driver
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
 at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:67)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:384)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:378)
-at pageObjects.Actions.fillPaymentData(Actions.java:140)
+at pageObjects.Actions.fillPaymentData(Actions.java:148)
 at pages.OrderTest.productsFunctionality(OrderTest.java:52)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -82,7 +82,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- productsFunctionality -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:pages.OrderTest@1e11bc55]" started-at="2026-07-17T11:53:58 IDT" name="afterTest" finished-at="2026-07-17T11:53:58 IDT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:pages.OrderTest@1e11bc55]" started-at="2026-07-17T12:55:33 IDT" name="afterTest" finished-at="2026-07-17T12:55:33 IDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->

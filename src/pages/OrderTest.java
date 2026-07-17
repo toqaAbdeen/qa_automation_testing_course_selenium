@@ -17,7 +17,7 @@ public class OrderTest extends Actions {
 	}
 
 	@Test(description = "Validate user can add product with quantity 2")
-	public void productsFunctionality() {
+	public void productsFunctionality() throws InterruptedException {
 
 		visitAutomationexerciseWebsite();
 
