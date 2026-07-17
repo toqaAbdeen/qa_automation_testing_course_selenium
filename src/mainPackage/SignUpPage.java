@@ -5,7 +5,9 @@ import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -18,7 +20,7 @@ public class SignUpPage extends Actions {
 
 	String username = "ToqaTest";
 
-	@BeforeTest
+	@BeforeSuite
 	public void setup() {
 		maximizeBrowser();
 	}
@@ -41,7 +43,7 @@ public class SignUpPage extends Actions {
 		// Account Information
 		selectGender();
 
-		typeInMandatoryField("password", "test@123");
+		typeInMandatoryField("passwordd", "test@123");
 		typeInMandatoryField("first_name", "Toqa");
 		typeInMandatoryField("last_name", "Abdeen");
 		typeInMandatoryField("address", "Nablus");
@@ -68,7 +70,7 @@ public class SignUpPage extends Actions {
 		assertions.checkAccountIsCreated();
 	}
 
-	@AfterTest
+	@AfterSuite
 	public void afterTest() {
 		closeBrowser();
 	}

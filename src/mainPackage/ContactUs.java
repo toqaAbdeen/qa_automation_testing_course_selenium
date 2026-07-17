@@ -1,6 +1,8 @@
 package mainPackage;
 
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -11,7 +13,7 @@ import support.Constant;
 public class ContactUs extends Actions implements Constant {
 	Assertions assertions = new Assertions();
 
-	@BeforeTest
+	@BeforeSuite
 	public void setup() {
 		maximizeBrowser();
 	}
@@ -29,7 +31,7 @@ public class ContactUs extends Actions implements Constant {
 		
 	}
 	
-	@AfterTest
+	@AfterSuite
 	public void afterTest() {
 		closeBrowser();
 	}
